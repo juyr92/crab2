@@ -1,0 +1,60 @@
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+
+&mt {
+  //  flavor = "tap-preferred";
+   // tapping_term_ms = <200>;
+};
+
+/ {
+
+    
+        keymap {
+                compatible = "zmk,keymap";
+
+            default_layer {
+        bindings = <
+        &kp Q &kp W &kp E &kp R &kp T                      &kp Y &kp U  &kp I    &kp O   &kp P
+        &kp A &kp S &kp D &kp F &kp G                      &kp H &kp J  &kp K    &kp L   &kp QUOT
+        &mt LSFT Z &kp X &kp C &kp V &kp B                 &kp N &kp M  &kp CMMA &kp DOT &mt LSFT RET
+                        &kp SPC &mo 1                      &tog 2  &kp BSPC
+        >;
+        };
+
+            left_layer {
+        bindings = <
+        &kp ESC   &kp LBKT    &kp UP     &kp RBKT     &kp LSHFT       &kp EQUAL   &kp NUM_7   &kp NUM_8   &kp NUM_9   &kp NUM_0
+        &kp TAB   &kp LEFT    &kp DOWN   &kp RIGHT    &kp F           &kp MINUS   &kp NUM_4   &kp NUM_5   &kp NUM_6   &kp SEMI
+        &kp LCTRL &kp Z       &kp X      &kp C        &kp V           &kp SLASH   &kp NUM_1   &kp NUM_2   &kp NUM_3   &kp BSLH
+                                         &kp LGUI     &trans          &kp GRAVE    &kp SEMI
+        >;
+        };
+
+        right_layer {
+        bindings = <
+        &mt TAB ESC &kp Q    &kp W    &kp E     &kp R           &trans   &trans   &trans   &trans   &trans
+        &kp LSFT    &kp A    &kp S    &kp D     &kp F           &trans   &trans   &trans   &trans   &trans
+        &kp LCTRL   &kp Z    &kp X    &kp C     &kp V           &trans   &trans   &trans   &trans   &trans
+                                      &kp SPC   &mo 3           &tog 2   &trans
+        >;
+        };
+
+        tri_layer {
+        bindings = <
+        &kp ESC     &kp K    &kp H    &kp J     &kp P           &trans   &trans   &trans   &trans   &trans
+        &kp LSFT    &kp M    &kp I    &kp T     &kp F           &trans   &trans   &trans   &trans   &trans
+        &kp LCTRL   &kp Z    &kp X    &kp C     &kp V           &trans   &trans   &trans   &trans   &trans
+                                      &kp SPC   &mo 3           &trans   &trans
+        >;
+        };
+
+    };
+};
